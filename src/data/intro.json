@@ -1,0 +1,139 @@
+{
+    "yName":"윤준하",
+    "yPhone":"010.9364.8735",
+    "yEmail":"jh0362@naver.com",
+    "yWorkList":[
+        {
+            "workName":"(주)소프트웍스",
+            "workType":"IT developer",
+            "workDate":"2022.04  -  재직중",
+            "workDesc":"주요업무 : 22년 4월 부터 1년간 마이데이터 서비스 기반 신한은행 SOL을 유지 보수 및 구축(NewSol) 하였으며, 22년4월부터 3개월간 클라우드 관리 시스템을 FE 신기술인 svelte로 구축 하였고, 22년 7월부터 현재는 SK e커머스인 T우주에서 2.0 을 구축 하고 있습니다."
+        },
+        {
+            "workName":"(주)인천스마트시티",
+            "workType":"IT developer",
+            "workDate":"2021.06  -  2022.04",
+            "workDesc":"주요업무 : 인천 남동공단을 관제하는 통합관제플랫폼(Java spring기반)을 제작하였으며, 그 과정에서 GIS를 이용한 화재감지 시스템, 교통노드정보 시스템, AI(KSB)를 이용한 교통예측정보, 또한 http기반으로 메타데이터를 수집하여 통근버스 피플카운팅 작업, 모비우스를 이용하여 mqtt통신으로 각종 센서데이터를 수집하여 사업장안전 플랫폼 개발 작업등을 하였습니다."
+        },
+        {
+            "workName":"(주)아이티언",
+            "workType":"IT engineer/Sales",
+            "workDate":"2020.07  -  2020.12",
+            "workDesc":"주요업무 : 주로 OSI 3계층과 4계층에 해당하는 TCP/IP 통신 기반의 네트워크 장비인 L4스위치(Load Balancing)을 다루었고, 포트기반의 트래픽을 조정하여 L3스위치로 라우팅하는 작업을 하였습니다. 추가로 보안 장비도 함께 다루어 네트워크 인프라를 구축하였고, 세일즈도 같이 하였습니다."
+        },
+        {
+            "workName":"제트컴퍼니",
+            "workType":"Salesman",
+            "workDate":"2015.12  -  2020.07",
+            "workDesc":"주요업무 : 대표와 직원 1명으로 이루어져 있는 작은 통신판매점에서 근무하였고, 3개 통신사 지식을 바탕으로 다양한 핸드폰 판매 뿐만 아니라 인터넷 판매 그리고 매장관리 까지 하였습니다."
+        }
+    ],
+    "yEduList":[
+        {
+            "eduName":"안양대학교",
+            "eduType":"정보통신공학과 (학사)",
+            "workDate":"2013.03-2020.02 (졸업)"
+        },
+        {
+            "eduName":"부천 상동고등학교",
+            "eduType":"이공계",
+            "workDate":"2009.03-2012.02 (졸업)"
+        }
+
+    ],
+    "yCoEduList":[
+        {
+            "eduName":"C#.NET플랫폼 SW엔지니어 양성과정",
+            "eduGrad":"정상수료",
+            "eduDate":"2019.06-2019.12",
+            "eduDescList":[
+                "C#과 .NET의 이해 및 실습",
+                "딥러닝, 머신러닝 등 신기술의 이해 및 실습",
+                "C#과 WindowForm을 이용한 어플리케이션 프로젝트 제작"
+            ]
+        },
+        {
+            "eduName":"빅데이터 융합응용 SW 개발자 양성과정",
+            "eduGrad":"정상수료",
+            "eduDate":"2021.01-2019.06",
+            "eduDescList":[
+                "Python과 R의 개념파악 및 실습",
+                "JSP, JavaScrpt, Ajax등의 FronEnd 기술 이해 및 구현",
+                "Java, Oracle을 이용한 Controller 구현",
+                "pring과 Tomcat을 이용한 MVC 구현"
+            ]
+        }
+    ],
+    "ySkillList":[
+        {
+            "skillType":"lg",
+            "skillName":"Java",
+            "skillScore":"80"
+        },
+        {
+            "skillType":"lg",
+            "skillName":"JavaScript",
+            "skillScore":"80"
+        },
+        {
+            "skillType":"lg",
+            "skillName":"LINUX",
+            "skillScore":"70"
+        },
+        {
+            "skillType":"lg",
+            "skillName":"SQL",
+            "skillScore":"90"
+        },
+        {
+            "skillType":"lg",
+            "skillName":"Python",
+            "skillScore":"60"
+        },
+        {
+            "skillType":"fe",
+            "skillName":"JSP",
+            "skillScore":"80"
+        },
+        {
+            "skillType":"fe",
+            "skillName":"Vue.Js",
+            "skillScore":"60"
+        },
+        {
+            "skillType":"fe",
+            "skillName":"REACT",
+            "skillScore":"90"
+        },
+        {
+            "skillType":"fe",
+            "skillName":"Svelte",
+            "skillScore":"70"
+        },
+        {
+            "skillType":"be",
+            "skillName":"ibatis",
+            "skillScore":"80"
+        },
+        {
+            "skillType":"be",
+            "skillName":"JPA",
+            "skillScore":"80"
+        },
+        {
+            "skillType":"be",
+            "skillName":"node express",
+            "skillScore":"60"
+        },
+        {
+            "skillType":"be",
+            "skillName":"Flask",
+            "skillScore":"70"
+        }
+    ],
+    "yCerfList":[
+        "정보처리기사(19202051004X) || 발급기관:과학기술정보통신부 || 취득일 : 2019.08.16",
+        "정보처리기능사(14642507617I) || 발급기관:과학기술정보통신부 || 취득일 : 2014.12.05",
+        "워드프로세서2급(05I9148348) || 발급기관:대한상공회의 || 취득일 : 2005.11.16"
+    ]
+}

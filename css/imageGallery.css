@@ -1,0 +1,60 @@
+.image-gallery-item {
+    position: relative;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+    cursor: pointer; /* 마우스 커서를 손가락 모양으로 변경 */
+}
+
+.image-gallery-item:hover {
+    /* 마우스가 위에 있을 때의 스타일 */
+    opacity: 0.25; /* 투명도 변경 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+}
+  
+.image-gallery-item .centered-title {
+    position: absolute;
+    top: 40%;
+    left: 50%; /* 왼쪽에서 50%의 위치에 정렬 */
+    transform: translateX(-50%); /* X축으로 -50% 만큼 이동하여 가운데 정렬 */
+    color: black; /* 검정색으로 설정 */
+    font-size: 28px; /* 폰트 크기를 24px로 설정 */
+    font-weight: bold;
+    text-align: center; /* 텍스트를 가운데로 정렬 */
+    width: 100%; /* 너비를 100%로 설정 */
+    white-space: normal; /* 텍스트가 자연스럽게 줄바꿈되도록 설정 */
+    
+}
+
+.transparent-image {
+    opacity: 0.35; /* 예를 들어 50% 투명도 */
+    /* 필요에 따라 추가 스타일링 */
+  }
+/* 중간 크기 화면 (예: 태블릿)에 대한 스타일 */
+@media (max-width: 768px) {
+    .image-gallery-item {
+      width: 100%; /* 화면 크기가 768px 이하일 때 카드 너비를 50%로 조정 */
+    }
+  }
+  
+  /* 작은 크기 화면 (예: 모바일)에 대한 스타일 */
+@media (max-width: 576px) {
+    .image-gallery-item {
+      width: 100%; /* 화면 크기가 576px 이하일 때 카드 너비를 100%로 조정 */
+    }
+}
+
+/* 모바일 화면을 위한 스타일 */
+@media (max-width: 576px) {
+    .image-gallery-item .centered-title {
+      font-size: 12px; /* 모바일 화면에서 폰트 크기를 18px로 조정 */
+      font-weight: bold;
+    }
+}
+/* 모바일 화면을 위한 스타일 */
+@media (max-width: 768px) {
+    .image-gallery-item .centered-title {
+      font-size: 18px; /* 모바일 화면에서 폰트 크기를 18px로 조정 */
+      font-weight: bold;
+    }
+}

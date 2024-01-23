@@ -5979,6 +5979,17 @@ textarea.form-control-lg {
   color: #fff;
   text-align: center;
   padding-right: 10rem;   /* 왼쪽 여백 */
+  width:100%;
+}
+/* 모바일 환경에서의 스타일 */
+@media (max-width: 768px) {
+  .carousel-caption {
+    right: 0;
+    left: 0;
+    padding-right: 1rem; /* 모바일 환경에 맞게 조정된 오른쪽 패딩 */
+    padding-left: 1rem;  /* 모바일 환경에 맞게 추가된 왼쪽 패딩 */
+    width: auto; /* 너비를 auto로 설정하여 콘텐츠에 맞게 조정 */
+  }
 }
 
 .carousel-dark .carousel-control-prev-icon,

@@ -7031,7 +7031,8 @@ fieldset:disabled .btn {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     color: #fff;
-    text-align: center
+    text-align: center;
+    width:100%;
 }
 
 .carousel-dark .carousel-control-next-icon,

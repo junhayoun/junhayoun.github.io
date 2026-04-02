@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9d4da2b4.css",
-    "main.js": "/static/js/main.ad8f5e45.js",
+    "main.js": "/static/js/main.38a1fe85.js",
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.07ea79f5.chunk.js": "/static/js/64.07ea79f5.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
@@ -36,6 +36,7 @@
     "static/media/js.png": "/static/media/js.7fbd92ca24a33f46ec00.png",
     "static/media/shinhanLogo.png": "/static/media/shinhanLogo.051d3a78673bebc5e03b.png",
     "static/media/centos.png": "/static/media/centos.f49aea160135ad1c3549.png",
+    "static/media/ibmsLogo.png": "/static/media/ibmsLogo.920a4e87996607698a9d.png",
     "static/media/kcclLogo.png": "/static/media/kcclLogo.efc6a73f25f9e7d62188.png",
     "static/media/elancerLogo.png": "/static/media/elancerLogo.d11190c053d6afac4680.png",
     "static/media/saraminLogo.png": "/static/media/saraminLogo.cf7ad31c7feffe452713.png",
@@ -52,7 +53,7 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.9d4da2b4.css.map": "/static/css/main.9d4da2b4.css.map",
-    "main.ad8f5e45.js.map": "/static/js/main.ad8f5e45.js.map",
+    "main.38a1fe85.js.map": "/static/js/main.38a1fe85.js.map",
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.07ea79f5.chunk.js.map": "/static/js/64.07ea79f5.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
@@ -60,6 +61,6 @@
   },
   "entrypoints": [
     "static/css/main.9d4da2b4.css",
-    "static/js/main.ad8f5e45.js"
+    "static/js/main.38a1fe85.js"
   ]
 }

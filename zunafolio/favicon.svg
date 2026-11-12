@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071326"/>
+      <stop offset="100%" stop-color="#02060D"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#2FD4B4"/>
+    </linearGradient>
+  </defs>
+  <!-- Background with subtle border -->
+  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
+  <rect width="32" height="32" rx="8" fill="none" stroke="rgba(47,212,180,0.35)" stroke-width="1.2"/>
+  
+  <!-- Terminal Prompt: > _ -->
+  <path d="M8 10.5 L14.5 16 L8 21.5" fill="none" stroke="url(#mintGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="17" y1="21.5" x2="24.5" y2="21.5" stroke="#38BDF8" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

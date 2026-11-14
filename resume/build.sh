@@ -17,4 +17,5 @@ trap 'rm -rf "$PROFILE"' EXIT
   --print-to-pdf="$OUT" \
   "file://$PWD/index.html" 2>/dev/null
 
-echo "생성 완료: $PWD/$OUT ($(mdls -raw -name kMDItemNumberOfPages "$OUT")페이지)"
+PAGES=$(python3 -c "import re,sys;d=open(sys.argv[1],'rb').read();print(len(re.findall(rb'/Type\s*/Page(?![s])',d)))" "$OUT")
+echo "생성 완료: $PWD/$OUT (${PAGES}페이지)"

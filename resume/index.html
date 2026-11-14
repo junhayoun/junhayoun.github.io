@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>윤준하 | 경력기술서</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  /* =====================================================================
+     경력기술서 · A4 인쇄 기준
+     본문 흑백 + 섹션 제목/표 헤더에만 포인트 1색
+     ===================================================================== */
+  :root {
+    --ink: #121417;
+    --ink-2: #3C4249;
+    --ink-3: #6B7280;
+    --line: #D4D8DE;
+    --line-2: #E8EBEF;
+    --acc: #2F47A6;
+    --acc-tint: #EFF2FB;
+    --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+            system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  }
+
+  @page { size: A4; margin: 13mm 14mm 14mm; }
+
+  * , *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0 auto; max-width: 182mm; padding: 10mm 0;
+    background: #fff; color: var(--ink);
+    font-family: var(--font); font-size: 9.6pt; line-height: 1.52;
+    letter-spacing: -0.012em; word-break: keep-all;
+    -webkit-font-smoothing: antialiased; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  @media print { body { padding: 0; max-width: none; } }
+
+  h1, h2, h3, h4, p, ul, ol, table { margin: 0; padding: 0; }
+  ul { list-style: none; }
+  a { color: inherit; text-decoration: none; }
+  strong { font-weight: 700; }
+
+  /* ---------- 헤더 ---------- */
+  .doc-title {
+    font-size: 8.2pt; font-weight: 700; letter-spacing: .22em;
+    color: var(--acc); text-transform: uppercase; margin-bottom: 3mm;
+  }
+  .hd { border-bottom: 1.6pt solid var(--ink); padding-bottom: 4mm; margin-bottom: 5mm; }
+  .hd-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 8mm; flex-wrap: wrap; }
+  .hd-name { font-size: 21pt; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; }
+  .hd-name span { font-size: 11pt; font-weight: 600; color: var(--ink-3); letter-spacing: -0.01em; margin-left: 2.5mm; }
+  .hd-role { font-size: 10.6pt; font-weight: 600; color: var(--acc); margin-top: 1.5mm; letter-spacing: -0.02em; }
+  .hd-meta { font-size: 8.8pt; color: var(--ink-2); text-align: right; line-height: 1.75; white-space: nowrap; }
+  .hd-meta b { font-weight: 600; color: var(--ink-3); display: inline-block; min-width: 15mm; text-align: left; }
+  .hd-meta a { color: var(--acc); font-weight: 500; }
+
+  /* ---------- 섹션 ---------- */
+  section { margin-top: 6mm; }
+  .sec-h {
+    display: flex; align-items: baseline; gap: 2.5mm;
+    border-bottom: 1pt solid var(--acc); padding-bottom: 1.4mm; margin-bottom: 3mm;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .sec-h h2 { font-size: 11pt; font-weight: 700; color: var(--acc); letter-spacing: -0.025em; }
+  .sec-h em { font-size: 8.2pt; font-style: normal; color: var(--ink-3); font-weight: 500; }
+
+  /* ---------- 핵심 역량 ---------- */
+  .cap { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+  .cap li { padding-left: 3.2mm; position: relative; font-size: 9.2pt; line-height: 1.5; }
+  .cap li::before { content: ''; position: absolute; left: 0; top: 1.45em; width: 1.6mm; height: 1.6mm; background: var(--acc); }
+  .cap b { display: block; font-weight: 700; margin-bottom: .3mm; }
+  .cap span { color: var(--ink-2); }
+
+  /* ---------- 표 ---------- */
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  th, td { border: .6pt solid var(--line); padding: 1.7mm 2.2mm; text-align: left; vertical-align: top; }
+  thead th { background: var(--acc-tint); color: var(--acc); font-weight: 700; font-size: 8.6pt; letter-spacing: -0.005em; }
+  .t-c { text-align: center; }
+  .nowrap { white-space: nowrap; }
+  tbody tr.edu td { background: #FAFBFC; color: var(--ink-3); font-size: 8.6pt; font-style: italic; }
+  tfoot td { background: var(--acc-tint); font-weight: 700; }
+
+  /* ---------- 프로젝트 ---------- */
+  .proj { border: .6pt solid var(--line); margin-bottom: 3.5mm; break-inside: avoid; page-break-inside: avoid; }
+  .proj-h { background: var(--acc-tint); border-bottom: .6pt solid var(--line); padding: 2.2mm 2.6mm; }
+  .proj-h-top { display: flex; align-items: baseline; gap: 2.2mm; }
+  .proj-no { font-size: 8.4pt; font-weight: 800; color: var(--acc); letter-spacing: .02em; flex: none; }
+  .proj-h h3 { font-size: 10.4pt; font-weight: 700; letter-spacing: -0.028em; line-height: 1.25; }
+  .proj-sub { margin-top: 1.1mm; font-size: 8.5pt; color: var(--ink-2); }
+  .proj-sub i { font-style: normal; color: var(--ink-3); }
+  .proj-sub b { font-weight: 600; }
+
+  .row { display: flex; border-top: .6pt solid var(--line-2); }
+  .proj > .row:first-of-type { border-top: 0; }
+  .row-k {
+    flex: none; width: 20mm; padding: 2mm 2.4mm; font-size: 8.5pt; font-weight: 700;
+    color: var(--acc); background: #FBFCFE; border-right: .6pt solid var(--line-2);
+  }
+  .row-v { flex: 1; padding: 2mm 2.6mm; min-width: 0; }
+  .row-v > p { font-size: 9.2pt; color: var(--ink-2); }
+  .row-v ul li { position: relative; padding-left: 3mm; font-size: 9.2pt; line-height: 1.5; }
+  .row-v ul li + li { margin-top: .5mm; }
+  .row-v ul li::before { content: '–'; position: absolute; left: 0; color: var(--ink-3); }
+  .row-v ul.res li::before { content: '▪'; color: var(--acc); font-size: 7pt; top: .05em; }
+  .stack { display: flex; flex-wrap: wrap; gap: 1mm 1.4mm; }
+  .stack b { font-size: 7.8pt; font-weight: 600; color: var(--ink-2); border: .6pt solid var(--line); border-radius: 1mm; padding: .35mm 1.5mm; background: #fff; }
+  .stack b.k { color: var(--acc); border-color: #BFC9E8; background: var(--acc-tint); }
+
+
+  /* ---------- 기술 ---------- */
+  .sk { border: .6pt solid var(--line); }
+  .sk-g { break-inside: avoid; page-break-inside: avoid; }
+  .sk-g + .sk-g { border-top: .6pt solid var(--line); }
+  .sk-h {
+    background: var(--acc-tint); padding: 1.5mm 2.4mm; font-size: 8.6pt; font-weight: 700; color: var(--acc);
+    display: flex; align-items: baseline; gap: 2mm; border-bottom: .6pt solid var(--line-2);
+  }
+  .sk-h em { font-style: normal; font-weight: 500; color: var(--ink-3); font-size: 8pt; }
+  .sk-g ul { padding: 1.6mm 2.4mm; }
+  .sk-g li { display: flex; gap: 2.5mm; font-size: 9pt; line-height: 1.46; }
+  .sk-g li + li { margin-top: .9mm; padding-top: .9mm; border-top: .6pt dotted var(--line-2); }
+  .sk-g li b { flex: none; width: 46mm; font-weight: 700; }
+  .sk-g li span { color: var(--ink-2); }
+
+
+  .foot { margin-top: 5mm; padding-top: 2mm; border-top: .6pt solid var(--line); font-size: 7.8pt; color: var(--ink-3); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<p class="doc-title">경력기술서 · Career Description</p>
+
+<header class="hd">
+  <div class="hd-top">
+    <div>
+      <h1 class="hd-name">윤준하<span>Junha Youn</span></h1>
+      <p class="hd-role">금융·공공 시스템 백엔드 개발자 · 백엔드 6년차</p>
+    </div>
+    <div class="hd-meta">
+      <div><b>Email</b> <a href="mailto:psd00236@gmail.com">psd00236@gmail.com</a></div>
+      <div><b>GitHub</b> <a href="https://github.com/junhayoun">github.com/junhayoun</a></div>
+      <div><b>LinkedIn</b> <a href="https://www.linkedin.com/in/junha-youn-3aaa20300/">linkedin.com/in/junha-youn-3aaa20300</a></div>
+      <div><b>Portfolio</b> <a href="https://junhayoun.github.io">junhayoun.github.io</a></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-h"><h2>핵심 역량</h2><em>대외 연계 · 운영 인프라</em></div>
+  <ul class="cap">
+    <li>
+      <b>금융 대외계(FEP) 연계</b>
+      <span>iGATE 기반 대외계에서 금융결제원·한국신용정보원·NICE평가정보 등 15개 기관, 5종 거래 유형 연계. CMS 고정길이 전문 파싱·송수신 및 TCP/IP·SFTP·TLS 레벨 장애 분석.</span>
+    </li>
+    <li>
+      <b>금융 데이터 연계 · 조회 성능 개선</b>
+      <span>신한은행 마이데이터(머니버스) 백엔드. BXM 인터페이스 호출과 XML→Map/VO 변환, 일 600만 건 호출 구간의 Oracle 조회 성능 개선.</span>
+    </li>
+    <li>
+      <b>공공 관제 플랫폼 설계</b>
+      <span>Spring Cloud Eureka 기반 마이크로서비스 8개 아키텍처 설계, OpenFeign으로 IoT(Mobius) 연계, OpenLayers·VWorld 기반 GIS 관제 화면 구현.</span>
+    </li>
+    <li>
+      <b>운영 인프라 구성</b>
+      <span>Docker 기반 Nginx·SSL 구성, Kubernetes Manifest 배포(Milvus·Attu·MinIO), Redis 세션 제어, F5 BIG-IP L4 로드밸런싱.</span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <div class="sec-h"><h2>경력 요약</h2><em>2020.08 ~ 재직 중</em></div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:30mm">재직기간</th>
+        <th style="width:30mm">소속</th>
+        <th class="t-c" style="width:14mm">직급</th>
+        <th>주요 고객사 · 프로젝트</th>
+        <th class="t-c" style="width:19mm">근무기간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nowrap">2026.02 ~ 재직 중</td>
+        <td>프리랜서</td>
+        <td class="t-c">–</td>
+        <td>미래에셋생명보험 — 차세대 대외계(FEP) 구축</td>
+        <td class="t-c nowrap">9개월</td>
+      </tr>
+      <tr>
+        <td class="nowrap">2024.09 ~ 2026.02</td>
+        <td>엔에스원소프트</td>
+        <td class="t-c">선임</td>
+        <td>인천국제공항공사 — 위치기반 보안순찰 앱 / 은평구청 — 스마트맨홀 IoT·GIS 관제</td>
+        <td class="t-c nowrap">1년 5개월</td>
+      </tr>
+      <tr>
+        <td class="nowrap">2022.04 ~ 2024.09</td>
+        <td>소프트웍스</td>
+        <td class="t-c">대리</td>
+        <td>SK텔레콤 — AICM AI 플랫폼 / T다이렉트샵 / T-Universe · 신한은행 — SOL 마이데이터 · 자사 솔루션 Cloud-i</td>
+        <td class="t-c nowrap">2년 5개월</td>
+      </tr>
+      <tr>
+        <td class="nowrap">2021.06 ~ 2022.04</td>
+        <td>인천스마트시티</td>
+        <td class="t-c">연구원</td>
+        <td>인천 남동공단 — GIS 통합관제 플랫폼 / IoT 사업장 센서 대시보드</td>
+        <td class="t-c nowrap">10개월</td>
+      </tr>
+      <tr class="edu">
+        <td class="nowrap">2021.01 ~ 2021.06</td>
+        <td colspan="3">빅데이터 융합 응용SW개발자 양성과정 — 중앙정보기술인재개발원</td>
+        <td class="t-c nowrap">6개월</td>
+      </tr>
+      <tr>
+        <td class="nowrap">2020.08 ~ 2020.12</td>
+        <td>아이티언</td>
+        <td class="t-c">사원</td>
+        <td>한성대학교 — 수강신청 인프라 구축</td>
+        <td class="t-c nowrap">4개월</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="sec-h"><h2>주요 프로젝트</h2><em>최근 순 · 상세 6건</em></div>
+
+  <!-- 01 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">01</span><h3>미래에셋생명 차세대 대외계(FEP) 구축</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>프리랜서</b> · <i>고객사</i> <b>미래에셋생명보험</b> · <i>역할</i> <b>백엔드 개발</b> · <i>기간</i> <b>2026.02 ~ 현재 (9개월)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>생명보험 거래를 15개 대외기관과 송수신하는 차세대 대외계(FEP) 시스템 구축. 파일계 8개 기관과 DMZ HTTP계 7개 기관의 이중 구조로 구성.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>금융결제원·한국신용정보원·NICE평가정보 등 15개 대외기관 연계 인터페이스 개발</li>
+        <li>CMS 고정길이 전문 파싱 및 송수신 처리 개발</li>
+        <li>TCP/IP·SFTP·TLS 레벨 인터페이스 장애 분석 및 대응</li>
+        <li>검증계 인터페이스 장애 분석 (일 20건 규모)</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">iGATE</b><b class="k">CMS 전문</b><b class="k">TCP/IP</b><b class="k">SFTP</b><b class="k">TLS</b>
+        <b>Java</b><b>Hibernate</b><b>SQL</b><b>Oracle</b><b>RHEL</b><b>Ant</b><b>Jenkins</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li>대외기관 <strong>15곳</strong>, 거래 유형 <strong>5종</strong>에 대한 연계 인터페이스 구축 (파일계 8 / DMZ HTTP계 7)</li>
+        <li>검증계 인터페이스 장애 <strong>일 20건 규모</strong> 분석·대응으로 구축 단계 인터페이스 안정화</li>
+        <li>CMS 고정길이 전문 파싱·송수신 처리를 구현해 파일계 기관 송수신 구간 표준화</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">02</span><h3>인천공항 위치기반 보안순찰 앱</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>엔에스원소프트 (선임)</b> · <i>고객사</i> <b>인천국제공항공사</b> · <i>역할</i> <b>백엔드 개발</b> · <i>기간</i> <b>2025.01 ~ 2026.02 (1년 1개월)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>공항 순찰 인력의 위치를 기반으로 순찰 경로와 점검 이력을 관리하는 웹뷰 기반 모바일 앱 구축.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>Maven 기반 Java 웹 애플리케이션 의존성 및 빌드 환경 관리</li>
+        <li>MyBatis 기반 데이터 조회 및 SQL 개발</li>
+        <li>모바일 단말기 정보 연동을 위한 서버 간 인터페이스 구축</li>
+        <li>사용자 세션 검증 및 API 요청 처리 로직 구현</li>
+        <li>Docker 기반 Nginx 서버 구축 및 SSL 인증서 설정</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">Java</b><b class="k">MyBatis</b><b class="k">Docker</b><b class="k">Nginx</b>
+        <b>JSP</b><b>JSTL</b><b>JavaScript</b><b>SQL</b><b>PostgreSQL</b><b>Maven</b><b>SSL/TLS</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li>Docker 컨테이너 내 Nginx·SSL 인증서 구성으로 웹뷰 앱의 HTTPS 운영 환경 확보</li>
+        <li>단말 정보 연동 인터페이스 구축으로 순찰 위치·점검 이력을 서버에서 단일 관리</li>
+        <li>세션 검증·API 요청 처리 로직을 공통화해 웹뷰 구간의 사용자 인증 흐름 일원화</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">03</span><h3>스마트맨홀 — IoT·GIS 기반 맨홀 관제 서비스</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>엔에스원소프트 (선임)</b> · <i>고객사</i> <b>은평구청</b> · <i>역할</i> <b>백엔드 개발 · 아키텍처 설계</b> · <i>기간</i> <b>2024.09 ~ 2025.01 (4개월)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>맨홀에 설치된 IoT 센서 값을 수집해 GIS 지도 위에서 상태를 관제하는 서비스. 백엔드 개발과 서비스 아키텍처 설계를 함께 담당.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>Spring Cloud Eureka 기반 마이크로서비스 아키텍처 설계</li>
+        <li>Spring Data JPA 기반 데이터 처리 및 서비스 개발</li>
+        <li>OpenFeign을 활용한 IoT Mobius 서버 연계 인터페이스 구축</li>
+        <li>Node.js 기반 GIS 타일 서버 구축 및 운영</li>
+        <li>React/Vite 및 Axios 기반 클라이언트 API 연동 환경 구성</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">Spring Cloud (Eureka)</b><b class="k">Spring Data JPA</b><b class="k">OpenFeign</b><b class="k">Mobius (IoT)</b>
+        <b>Netflix OSS</b><b>Java</b><b>SQL</b><b>PostgreSQL</b><b>Node.js</b><b>MapTiler</b><b>React (Vite)</b><b>OpenLayers</b><b>Gradle</b><b>Docker</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li><strong>마이크로서비스 8개</strong>로 구성된 서비스 아키텍처 설계 및 서비스 디스커버리 체계 수립</li>
+        <li>OpenFeign 기반 Mobius 연계로 IoT 센서 수집 경로 표준화</li>
+        <li>Node.js GIS 타일 서버를 분리 운영해 지도 렌더링 부하를 관제 서비스에서 격리</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <!-- 04 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">04</span><h3>SKT AICM — AI 플랫폼 구축</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>소프트웍스 (대리)</b> · <i>고객사</i> <b>SK텔레콤</b> · <i>역할</i> <b>백엔드 개발 · 인프라</b> · <i>기간</i> <b>2024.04 ~ 2024.09 (5개월)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>SK텔레콤 신규 투자 과제로 추진된 AI 플랫폼 구축. 벡터 검색 기반 서비스를 GPU 서버 환경에서 운영.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>SKT 신규 AI 서비스 도입을 위한 AI 플랫폼 개발 환경 구성 및 서비스 연계</li>
+        <li>기존 Kubernetes 클러스터 환경에서 YAML Manifest 기반 컨테이너 배포 구성</li>
+        <li>Deployment·Service 등 Kubernetes 리소스 설정 및 Milvus·Attu·MinIO 서비스 배포</li>
+        <li>Python 기반 PyMilvus 및 TensorFlow 연계를 통한 벡터 데이터 처리 기능 개발</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">Kubernetes</b><b class="k">Milvus</b><b class="k">PyMilvus</b><b class="k">MinIO</b>
+        <b>Attu</b><b>TensorFlow</b><b>Python</b><b>Java</b><b>Spring Data JPA</b><b>Vue.js</b><b>PostgreSQL</b><b>Gradle</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li>Kubernetes 환경에 벡터 검색 스택(Milvus·Attu·MinIO) 배포로 AI 플랫폼 운영 기반 구축</li>
+        <li>PyMilvus·TensorFlow 연계로 벡터 데이터 적재·조회 기능 제공</li>
+        <li>YAML Manifest 기반 배포 구성으로 GPU 서버 환경의 서비스 배포 절차 표준화</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <!-- 05 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">05</span><h3>SKT T다이렉트샵 관리자 시스템</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>소프트웍스 (대리)</b> · <i>고객사</i> <b>SK텔레콤</b> · <i>역할</i> <b>백엔드 개발</b> · <i>기간</i> <b>2023.10 ~ 2024.04 (6개월)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>SK텔레콤 T다이렉트샵 운영자용 관리자 시스템의 유지보수 및 보안·접근통제 기능 개발.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>Java/Spring 기반 T다이렉트샵 관리자 시스템 유지보수</li>
+        <li>Redis 기반 중복 로그인 제어 및 사용자 세션 관리</li>
+        <li>Jasypt 기반 DB 접속정보 암호화 및 보안 설정 관리</li>
+        <li>관리자 접근 차단 및 예외 사용자 관리 기능 개발</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">Java / Spring</b><b class="k">Redis</b><b class="k">Jasypt</b><b class="k">MyBatis</b>
+        <b>Thymeleaf</b><b>SQL</b><b>Oracle</b><b>Maven</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li>Redis 기반 중복 로그인 제어·세션 타임아웃 적용으로 관리자 계정 동시 사용 통제</li>
+        <li>Jasypt 적용으로 DB 접속정보 평문 노출 제거</li>
+        <li>차단 지역·예외 사용자 관리 기능 추가로 관리자 접근 통제 범위 확대</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <!-- 06 -->
+  <article class="proj">
+    <div class="proj-h">
+      <div class="proj-h-top"><span class="proj-no">06</span><h3>신한은행 SOL 마이데이터 자산관리 (머니버스)</h3></div>
+      <p class="proj-sub"><i>소속</i> <b>소프트웍스 (대리)</b> · <i>고객사</i> <b>신한은행</b> · <i>역할</i> <b>백엔드 개발</b> · <i>기간</i> <b>2022.04 ~ 2023.04 (1년)</b></p>
+    </div>
+    <div class="row">
+      <div class="row-k">개요</div>
+      <div class="row-v"><p>마이데이터를 기반으로 고객 자산을 통합 조회·관리하는 신한 SOL 앱 자산관리 서비스(머니버스)의 백엔드 개발 및 운영.</p></div>
+    </div>
+    <div class="row">
+      <div class="row-k">담당업무</div>
+      <div class="row-v"><ul>
+        <li>신한은행 마이데이터 기반 자산관리 서비스(머니버스) 백엔드 개발 및 유지보수</li>
+        <li>머니버스 캘린더 서비스의 응답 지연 원인 분석 및 Oracle SQL 힌트 적용을 통한 조회 성능 개선</li>
+        <li>BXM 인터페이스 호출 및 XML 응답 데이터의 Map/VO 변환을 통한 마이데이터 조회·화면 연계 기능 개발</li>
+        <li>내차리포트·헬스케어·주식정보 등 외부 서비스 인터페이스 연동 및 데이터 처리</li>
+        <li>머니버스 선물·쿠폰 등 대고객 이벤트 서비스 유지보수 및 운영 대응</li>
+      </ul></div>
+    </div>
+    <div class="row">
+      <div class="row-k">사용기술</div>
+      <div class="row-v"><div class="stack">
+        <b class="k">Java</b><b class="k">Oracle</b><b class="k">BXM</b><b class="k">마이데이터</b>
+        <b>SQL 튜닝 (힌트)</b><b>JSP</b><b>JavaScript</b><b>XML</b><b>Tibero</b>
+      </div></div>
+    </div>
+    <div class="row">
+      <div class="row-k">성과</div>
+      <div class="row-v"><ul class="res">
+        <li>일 <strong>600만 건</strong> 호출 구간인 머니버스 캘린더의 응답 지연 원인을 분석하고 Oracle SQL 힌트를 적용해 조회 성능 개선</li>
+        <li>내차리포트·헬스케어·주식정보 등 <strong>외부 인터페이스 30개</strong> 연동으로 자산관리 조회 범위 확대</li>
+        <li>BXM 응답 XML의 Map/VO 변환 계층을 공통화해 마이데이터 조회·화면 연계 구조 정리</li>
+      </ul></div>
+    </div>
+  </article>
+</section>
+
+<section>
+  <div class="sec-h"><h2>기타 수행 프로젝트</h2><em>5건</em></div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:28mm">기간</th>
+        <th style="width:42mm">프로젝트</th>
+        <th style="width:33mm">소속 · 고객사</th>
+        <th>담당업무</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="nowrap">2023.07 ~ 2023.10</td>
+        <td>SK T-Universe<br>차세대 구독 커머스</td>
+        <td>소프트웍스 · SK텔레콤</td>
+        <td>차세대 2.0 서비스 구축을 위한 API 설계 / 차세대 2.0 서비스 화면 개발 / 구독 해지·일시정지 관련 화면 개발<br><span style="color:var(--ink-3);font-size:8.2pt">TypeScript · JSP · Node.js</span></td>
+      </tr>
+      <tr>
+        <td class="nowrap">2023.04 ~ 2023.07</td>
+        <td>Cloud-i<br>클라우드 부하·트래픽 관리 솔루션</td>
+        <td>소프트웍스 · 자사 솔루션 R&amp;D</td>
+        <td>자사 솔루션 R&amp;D 참여 / 프론트엔드 설계 및 개발 총괄 / 기존 JSP 기반 화면을 Svelte로 전환<br><span style="color:var(--ink-3);font-size:8.2pt">Svelte · Java · Spring Data JPA · PostgreSQL · Gradle</span></td>
+      </tr>
+      <tr>
+        <td class="nowrap">2021.06 ~ 2022.04</td>
+        <td>IoT 기반 사업장 센서 대시보드</td>
+        <td>인천스마트시티 · 인천 남동공단</td>
+        <td>Node.js 기반 MQTT Topic 구독 및 센서 측정 데이터 수신·DB 적재 로직 개발 / JPA·Hibernate 기반 센서 데이터 조회 및 영속성 관리 / Mobius IoT 서버 연계 및 유지보수 / 사업장별 센서 현황·측정 데이터 시각화<br><span style="color:var(--ink-3);font-size:8.2pt">Node.js · MQTT · Java · JPA/Hibernate · MariaDB · Vue.js</span></td>
+      </tr>
+      <tr>
+        <td class="nowrap">2021.06 ~ 2022.04</td>
+        <td>GIS 기반 통합관제 플랫폼</td>
+        <td>인천스마트시티 · 인천 남동공단</td>
+        <td>화재·교통·시설물 관리를 위한 GIS 통합관제 플랫폼 개발 / VWorld 지도 API·OpenLayers 기반 GIS 지도 구현 / CCTV·화재 센서·교통정보 마커 및 상세 팝업 / 표준노드링크 교통정보 연계, WebSocket 기반 화재감시카메라 실시간 연동<br><span style="color:var(--ink-3);font-size:8.2pt">OpenLayers · VWorld · WebSocket · Java · JPA/Hibernate · MariaDB</span></td>
+      </tr>
+      <tr>
+        <td class="nowrap">2020.08 ~ 2020.12</td>
+        <td>한성대학교<br>수강신청 인프라 구축</td>
+        <td>아이티언 · 한성대학교</td>
+        <td>F5 BIG-IP 기반 서버 상태 모니터링 및 가용성 점검 / TCP/IP 기반 L4 로드밸런싱 구성 및 대량 접속 트래픽 분산 / 가상 서버(VIP)·서버 풀(Pool) 트래픽 통계 수집·분석 / 운영 로그 분석 및 장애 대응<br><span style="color:var(--ink-3);font-size:8.2pt">F5 BIG-IP · TCP/IP · L4 · Linux (RHEL/CentOS)</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="sec-h"><h2>보유 기술</h2><em>실제 수행 프로젝트 기준</em></div>
+  <div class="sk">
+    <div class="sk-g">
+      <div class="sk-h">주력 <em>실무의 중심이 되는 기술 · 5</em></div>
+      <ul>
+        <li><b>Java / Spring</b><span>미래에셋 FEP, 신한 마이데이터, SKT AICM 등 2020년부터 주 개발 언어</span></li>
+        <li><b>MyBatis / JPA · Hibernate</b><span>인천공항 순찰앱·SKT TDS는 MyBatis, 스마트맨홀·Cloud-i·남동공단 관제는 JPA, 미래에셋 FEP는 Hibernate로 데이터 접근 설계</span></li>
+        <li><b>Oracle</b><span>신한 마이데이터에서 쿼리 힌트로 머니버스 캘린더 응답 지연 개선, SKT TDS·인천공항 운영 DB</span></li>
+        <li><b>대외계 연계<br>(iGATE · TCP/IP · SFTP · CMS)</b><span>미래에셋 FEP에서 iGATE 기반으로 15개 대외기관, 5종 거래 유형 연계</span></li>
+        <li><b>Docker</b><span>인천공항 순찰앱 컨테이너 내 Nginx·SSL 구성, 스마트맨홀 빌드 환경 구성</span></li>
+      </ul>
+    </div>
+    <div class="sk-g">
+      <div class="sk-h">보조 <em>프로젝트에서 직접 다룬 기술 · 7</em></div>
+      <ul>
+        <li><b>Kubernetes</b><span>SKT AICM GPU 트래픽 분산 아키텍처 설계 및 Milvus·Attu·MinIO 배포</span></li>
+        <li><b>Redis</b><span>SKT TDS 동시 로그인 제어·세션 타임아웃 관리</span></li>
+        <li><b>PostgreSQL</b><span>인천공항 순찰앱·스마트맨홀·SKT AICM·Cloud-i 운영 DB</span></li>
+        <li><b>Node.js</b><span>스마트맨홀 MapTiler 타일 매핑 GIS 서버, 남동공단 MQTT 수집, SK T-Universe</span></li>
+        <li><b>Python</b><span>SKT AICM pymilvus·TensorFlow 벡터 연산</span></li>
+        <li><b>React</b><span>스마트맨홀 Vite·Axios 공통 설정 및 클라이언트 API 연동</span></li>
+        <li><b>Vue.js</b><span>SKT AICM, 남동공단 GIS 관제·IoT 센서 대시보드</span></li>
+      </ul>
+    </div>
+    <div class="sk-g">
+      <div class="sk-h">경험 <em>써 본 적 있는 기술 · 7</em></div>
+      <ul>
+        <li><b>F5 BIG-IP / L4</b><span>한성대학교 수강신청 인프라 로드밸런싱 및 트래픽 통계 분석</span></li>
+        <li><b>Milvus</b><span>SKT AICM 벡터 DB 배포 및 운영</span></li>
+        <li><b>OpenLayers</b><span>남동공단 GIS 지도 구현, 스마트맨홀 GIS 화면</span></li>
+        <li><b>Svelte</b><span>Cloud-i 솔루션의 기존 JSP 화면을 Svelte로 전환</span></li>
+        <li><b>Thymeleaf</b><span>SKT TDS 관리자 화면</span></li>
+        <li><b>MariaDB</b><span>남동공단 GIS 통합관제 플랫폼</span></li>
+        <li><b>Tibero</b><span>신한은행 마이데이터</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<div class="foot">
+  <span>윤준하 · 경력기술서</span>
+  <span>최종 수정 2026.11.14</span>
+</div>
+
+</body>
+</html>
